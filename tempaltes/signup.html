@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    body{
+    background-color: violet;
+    }
+        table,th,td{
+        border: 2px solid black;
+
+
+        }
+
+        .btn{
+         position: relative;
+         top: 200px;
+         left: 720px;
+         border-radius: 50%;
+
+
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">SIGN UP HERE</h1>
+<div class="box">
+<form action="signup" method="post">
+    {% csrf_token %}
+    <h3 style="color:red">{{ data }}</h3>
+    <table align="center">
+        <tr>
+            <td>User:</td>
+            <td><input type="text" name="nmt"></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" name="emt"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="pmt"></td>
+        </tr>
+<!--<tr>-->
+<!--            <td>Confirm Password:</td>-->
+<!--            <td><input type="text" name="pmt"></td>-->
+<!--        </tr>-->
+
+        <div class="btn">
+<!--            <button type="submit" >Sign up</button>-->
+            <button type="submit" name="btng">Register</button>
+            <a class="nav-link" href="{% url 'home' %}">Return</a>
+
+
+           </div>
+
+
+
+
+
+
+
+
+
+    </table>
+
+
+</form>
+</body>
+</html>
+

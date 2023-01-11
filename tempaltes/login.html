@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    body{
+    background-color: khaki;
+    }
+        table,th,td{
+        border: 2px solid black;
+
+
+        }
+
+        .btn{
+         position: relative;
+         top: 100px;
+         left: 720px;
+         border-radius: 50%;
+
+
+        }
+        .box #btn1{
+        position: relative;
+        left: 780px;
+        top: 13px;
+        border-radius: 50px;
+
+
+        }
+        .nav-link a{
+
+        border: 2px solid black;
+
+
+        }
+
+    </style>
+</head>
+<body>
+
+<h1 align="center">Login Here</h1>
+
+<div class="box">
+<form action="" method="post">
+    {% csrf_token %}
+    <table align="center">
+        <tr>
+            <td>User:</td>
+            <td><input type="text" name="uname"></td>
+        </tr>
+
+        <tr>
+            <td>Password:</td>
+            <td><input type="text" name="pass"></td>
+        </tr>
+
+        <div class="btn">
+<!--            <button type="submit" >Sign up</button>-->
+
+            <input type="submit" value="login">
+            <a class="nav-link" href="{% url 'signup' %}">signup</a>
+
+        </div>
+    </table>
+</form>
+</div>
+</body>
+</html>
+
