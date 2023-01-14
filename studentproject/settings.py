@@ -85,6 +85,11 @@ DATABASES = {
     }
 }
 
+AUTHENTICATION_BACKENDS=[
+    'django.contrib.auth.backends.ModelBackend',  # This is the default that allows us to log in via username
+    'stuapp.authentication.EmailAuthBackend'
+
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -126,3 +131,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# AUTHENTICATION_BACKENDS = [
+#     'django.contrib.auth.backends.ModelBackend', # This is the default that allows us to log in via username
+#     'account.authentication.EmailAuthBackend'
+# ]
