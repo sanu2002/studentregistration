@@ -123,3 +123,16 @@ def delete_fun(request,id):
     s1 = Student.objects.get(id=id)
     s1.delete()
     return redirect('display')
+
+def search(request):
+    if request.method=="POST":
+        data=request.POST['query']
+        allpost=Student.objects.filter(Stud_Name__icontains=data)
+       
+
+        params={"allpost":allpost}
+
+        return render(request,'search.html',params)
+
+    else:
+        return render(request,'home.html',{'data':"PAGE NOT FOUND"})
