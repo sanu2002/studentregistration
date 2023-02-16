@@ -96,7 +96,7 @@ AUTHENTICATION_BACKENDS=[
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',      # This is the default that allows us to log in via username
-    'authapp.authentication.EmailAuthBackend'
+    'stuapp.authentication.EmailAuthBackend'
 ]
 
 AUTH_PASSWORD_VALIDATORS = [
